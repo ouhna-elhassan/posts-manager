@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1033640282774",
+    "project_id": "postsapp-1bc79",
+    "storage_bucket": "postsapp-1bc79.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033640282774:android:ece4d316ec6a83808550b7",
+        "android_client_info": {
+          "package_name": "com.example.postsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033640282774-282svg8dve2b01rm0s77rjf74dumvbil.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGJ2hzUlkoov8QV4c7cdafFLNJIve9Cr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033640282774-282svg8dve2b01rm0s77rjf74dumvbil.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
