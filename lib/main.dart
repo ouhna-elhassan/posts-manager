@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return  HomePage();//isLogedIn()==true?HomePage():SingIn()
+    return isLogedIn()==true?HomePage():SingIn();
   }
 
 }

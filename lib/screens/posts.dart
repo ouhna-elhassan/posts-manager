@@ -5,26 +5,9 @@ import '../apilayer/requests.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 import 'dart:core';
-/*
-import 'package:path/path.dart';
-import 'package:sqflite/sqflite.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'dart:convert';
- */
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
-//import 'package:image_downloader/image_downloader.dart';
 import '../components/postContainer.dart';
 
-/*
-class PostContainer extends StatefulWidget {
-  PostContainer({Key? key,required this.post}) : super(key: key);
-
-  final Post post;
-
-  @override
-  State<PostContainer> createState() => _PostContainerState();
-}
- */
 
 class Posts extends StatefulWidget {
   Posts({Key? key,required this.tag}) : super(key: key);
@@ -95,31 +78,31 @@ class _PostsState extends State<Posts> {
             pagingController: _pagingController,
             builderDelegate: PagedChildBuilderDelegate<Post>(
               itemBuilder: (context, item, index) =>
-                  GestureDetector(
-                    onLongPress: (){
-                      showDialog<String>(
-                          context:context,
-                          builder:(BuildContext context) => AlertDialog(
-                            title:const Text('Delet'),
-                            content: const Text('delete this post?'),
-                            actions: [
-                              TextButton(onPressed: (){Navigator.pop(context);Fluttertoast.showToast(msg:'Cancel');}, child: const Text('Cancel')),
-                              TextButton(
-                                  onPressed: (){
-                                    Navigator.pop(context);
-                                    deletePost(item.id);
-                                  },
-                                  child: const Text('Ok')),
-                              ],
-                          )
-                      );
-                    },
-                    child:  PostContainer(post: item),
+              GestureDetector(
+                  onLongPress: (){
+                    showDialog<String>(
+                      context:context,
+                      builder:(BuildContext context) => AlertDialog(
+                        title:const Text('Delet'),
+                        content: const Text('delete this post?'),
+                        actions: [
+                          TextButton(onPressed: (){Navigator.pop(context);Fluttertoast.showToast(msg:'Cancel');}, child: const Text('Cancel')),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.pop(context);
+                              deletePost(item.id);
+                            },
+                            child: const Text('Ok')
+                          ),
+                        ],
+                      )
+                    );
+                  },
+                  child:  PostContainer(post: item),
+              ),
             ),
           ),
-        ),
         )
       );
-}
-
+    }
 }

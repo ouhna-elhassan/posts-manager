@@ -30,27 +30,14 @@ class User{
   final String title;
   final String firstName;
   final String lastName;
-  //final String gender;
-  //final String email;
-  //final String dateOfBirth;
-  //final String registerDate;
-  //final String phone;
   final String picture;
-  //final Object location;
-
 
   const User({
     required  this.id,
     required this.title,
     required this.firstName,
     required this.lastName,
-    //required  this.gender,
-    //required this.email,
-    //required this.dateOfBirth,
-    //required this.registerDate,
-    //required  this.phone,
     required this.picture,
-    //required this.location,
 
   });
 
@@ -60,13 +47,7 @@ class User{
       title:json['title'],
       firstName:json['firstName'],
       lastName:json['lastName'],
-      //gender:json['gender'],
-      //email:json['email'],
-      //dateOfBirth:json['dateOfBirth'],
-      //registerDate:json['registerDate'],
-      //phone:json['phone'],
       picture:json['picture'],
-      //location:json['location'],
     );
   }
 
@@ -102,7 +83,7 @@ class Post{
       //link:json['link'] as String,
       tags:json['tags'] as List<dynamic>,
       publishDate:json['publishDate'] as String,
-      owner:User.fromJson(json['owner']), //subList.map((item) => item.toJson()).toList(),// as Object, User.fromJson(jsonDecode(json['owner']))
+      owner:User.fromJson(json['owner']), 
     );
   }
 
